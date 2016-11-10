@@ -137,6 +137,6 @@ cconds <- lapply(counts,
 ## output contingency tables
 
 qwrite(counts, "ctable-counts.rds");
-qwrite(fconds, "ctable-prop_class-conditionals.rds");
-qwrite(cconds, "ctable-prop_feature-conditionals.rds");
+qwrite(fconds, "ctable-prop_feature-conditionals.rds");
+qwrite(cconds, "ctable-prop_class-conditionals.rds");
 
