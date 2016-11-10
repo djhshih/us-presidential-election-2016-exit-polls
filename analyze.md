@@ -1,6 +1,6 @@
 %\VignetteEngine{knitr::knitr}
 
-# Analysis of exit poll for 2016 general presidential election
+# Analysis of exit polls for the 2016 general presidential election
 
 **Questions**:
   * What characterizes Trump supporters?
