@@ -4,7 +4,7 @@
 
 **Questions**:
   * What characterizes Trump supporters?
-  * How do Trump supporters perceive candidates?
+  * How do Trump supporters perceive the candidates?
   * Why did Trump supporters vote for Trump?
 
 ```{r}
@@ -144,7 +144,7 @@ cconds[["white born-again or evangelical christian?"]]
 cconds[["area type"]]
 ```
 
-# How do Trump supporters perceive candidates?
+# How do Trump supporters perceive the candidates?
 
 ## Which candidate qualities matter the most to Trump supporters?
 ```{r}

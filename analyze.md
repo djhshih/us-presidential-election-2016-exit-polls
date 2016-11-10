@@ -4,7 +4,7 @@
 
 **Questions**:
   * What characterizes Trump supporters?
-  * How do Trump supporters perceive candidates?
+  * How do Trump supporters perceive the candidates?
   * Why did Trump supporters vote for Trump?
 
 
@@ -362,7 +362,7 @@ cconds[["area type"]]
 |trump           |  0.2535162|     0.5219656|  0.2245181|
 |other/no answer |  0.3947991|     0.4736013|  0.1315997|
 
-# How do Trump supporters perceive candidates?
+# How do Trump supporters perceive the candidates?
 
 ## Which candidate qualities matter the most to Trump supporters?
 
