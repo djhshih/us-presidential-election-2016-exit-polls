@@ -4,8 +4,8 @@
 
 **Questions**:
   * What characterizes Trump supporters?
-  * What motivates Trump supporters?
-  * What do Trump supporters think of the candidates?
+  * How do Trump supporters perceive candidates?
+  * Why did Trump supporters vote for Trump?
 
 
 ```r
@@ -362,128 +362,7 @@ cconds[["area type"]]
 |trump           |  0.2535162|     0.5219656|  0.2245181|
 |other/no answer |  0.3947991|     0.4736013|  0.1315997|
 
-# What motivates Trump supporters?
-
-## Which issues do Trump supporters care about?
-
-```r
-cconds[["most important issue facing the country"]]
-```
-
-
-
-|                | foreign policy| immigration|   economy| terrorism|
-|:---------------|--------------:|-----------:|---------:|---------:|
-|clinton         |      0.1694855|   0.0904100| 0.5875321| 0.1525724|
-|trump           |      0.0986005|   0.1855689| 0.4870047| 0.2288259|
-|other/no answer |      0.1513471|   0.1014263| 0.6069731| 0.1402536|
-
-## What do Trump supporters think of international trade?
-
-```r
-cconds[["effect of international trade"]]
-```
-
-
-
-|                | creates u.s. jobs| takes away u.s. jobs| does not affect jobs|
-|:---------------|-----------------:|--------------------:|--------------------:|
-|clinton         |         0.5291458|            0.3073297|            0.1635244|
-|trump           |         0.3029150|            0.6218901|            0.0751949|
-|other/no answer |         0.4818966|            0.3551724|            0.1629310|
-
-## What do Trump supporters think of the ongoing war?
-
-```r
-cconds[["how is the fight against isis going?"]]
-```
-
-
-
-|                | very well| somewhat well| somewhat badly| very badly|
-|:---------------|---------:|-------------:|--------------:|----------:|
-|clinton         | 0.1177523|     0.5819842|      0.2392696|  0.0609940|
-|trump           | 0.0145487|     0.1903907|      0.3454872|  0.4495734|
-|other/no answer | 0.0451761|     0.4058193|      0.3683002|  0.1807044|
-
-## What do Trump supporters think of Obamacare?
-
-```r
-cconds[["view on obamacare"]]
-```
-
-
-
-|                | did not go far enough| was about right| went too far|
-|:---------------|---------------------:|---------------:|------------:|
-|clinton         |             0.5285833|       0.3334254|    0.1379913|
-|trump           |             0.1168533|       0.0389805|    0.8441662|
-|other/no answer |             0.2653430|       0.3185921|    0.4160650|
-
-## Do Trump supporters want the wall?
-
-```r
-cconds[["view of u.s. wall along the entire mexican border"]]
-```
-
-
-
-|                |   support|    oppose|
-|:---------------|---------:|---------:|
-|clinton         | 0.0908270| 0.9091730|
-|trump           | 0.7934703| 0.2065297|
-|other/no answer | 0.3022556| 0.6977444|
-79% of Trump supporters support the construction of the wall.
-
-## How has the financial situation of Trump supporters changed compared to four years ago?
-
-```r
-cconds[["financial situation compared to four years ago:"]]
-```
-
-
-
-|                | better today| worse today| about the same|
-|:---------------|------------:|-----------:|--------------:|
-|clinton         |    0.4819150|   0.1107982|      0.4072868|
-|trump           |    0.1570433|   0.4447122|      0.3982446|
-|other/no answer |    0.2324159|   0.1521407|      0.6154434|
-44% of Trump supporters are financially worse today compared to four years
-ago.
-
-## What do Trump supporters think of the federal government?
-
-```r
-cconds[["feelings about the federal government"]]
-```
-
-
-
-|                | enthusiastic| satisfied| dissatisfied|     angry|
-|:---------------|------------:|---------:|------------:|---------:|
-|clinton         |    0.0834423| 0.3851251|    0.4428459| 0.0885866|
-|trump           |    0.0216814| 0.1042478|    0.4894690| 0.3846018|
-|other/no answer |    0.0195618| 0.2300469|    0.5297340| 0.2206573|
-87% of Trump supporters are dissatisified or angry with the federal
-government.
-
-## What do Trump supporters think of the direction of the country? 
-
-```r
-cconds[["direction of the country"]]
-```
-
-
-
-|                | right direction| wrong track|
-|:---------------|---------------:|-----------:|
-|clinton         |       0.6570784|   0.3429216|
-|trump           |       0.0581427|   0.9418573|
-|other/no answer |       0.1506977|   0.8493023|
-94% of Trump supporters believe the direction is on the wrong track.
-
-
-# What do Trump supporters think of the candidates?
+# How do Trump supporters perceive candidates?
 
 ## Which candidate qualities matter the most to Trump supporters?
 
@@ -501,20 +380,6 @@ cconds[["which candidate quality mattered most?"]]
 73% of Trump supporters view the ability to bring change as the most important
 qualitity in the presidential candidate.
 
-
-## What do Trump supporters think of Obama?
-
-```r
-cconds[["opinion of barack obama as president"]]
-```
-
-
-
-|                | strongly approve| somewhat approve| somewhat disapprove| strongly disapprove|
-|:---------------|----------------:|----------------:|-------------------:|-------------------:|
-|clinton         |        0.6531926|        0.2905939|           0.0353587|           0.0208548|
-|trump           |        0.0287158|        0.0912878|           0.1982629|           0.6817336|
-|other/no answer |        0.1460775|        0.4427412|           0.2651037|           0.1460775|
 
 ## What do Trump supporters think of Hillary?
 
@@ -644,9 +509,146 @@ cconds[["does donald trump's treatment of women bother you:"]]
 |trump           | 0.1198898| 0.3270530| 0.2494668|  0.3035905|
 |other/no answer | 0.5768025| 0.2304075| 0.1003135|  0.0924765|
 
+# Why did Trump supporters vote for Trump?
+
+## Which issues do Trump supporters care about?
+
+```r
+cconds[["most important issue facing the country"]]
+```
+
+
+
+|                | foreign policy| immigration|   economy| terrorism|
+|:---------------|--------------:|-----------:|---------:|---------:|
+|clinton         |      0.1694855|   0.0904100| 0.5875321| 0.1525724|
+|trump           |      0.0986005|   0.1855689| 0.4870047| 0.2288259|
+|other/no answer |      0.1513471|   0.1014263| 0.6069731| 0.1402536|
+
+## How has the financial situation of Trump supporters changed compared to four years ago?
+
+```r
+cconds[["financial situation compared to four years ago:"]]
+```
+
+
+
+|                | better today| worse today| about the same|
+|:---------------|------------:|-----------:|--------------:|
+|clinton         |    0.4819150|   0.1107982|      0.4072868|
+|trump           |    0.1570433|   0.4447122|      0.3982446|
+|other/no answer |    0.2324159|   0.1521407|      0.6154434|
+44% of Trump supporters are financially worse today compared to four years
+ago.
+
+## What do Trump supporters think of international trade?
+
+```r
+cconds[["effect of international trade"]]
+```
+
+
+
+|                | creates u.s. jobs| takes away u.s. jobs| does not affect jobs|
+|:---------------|-----------------:|--------------------:|--------------------:|
+|clinton         |         0.5291458|            0.3073297|            0.1635244|
+|trump           |         0.3029150|            0.6218901|            0.0751949|
+|other/no answer |         0.4818966|            0.3551724|            0.1629310|
+While 62% of Trump supporters believe international trade eliminates jobs, 30%
+believe it creates jobs.
+
+## What do Trump supporters think of the ongoing war?
+
+```r
+cconds[["how is the fight against isis going?"]]
+```
+
+
+
+|                | very well| somewhat well| somewhat badly| very badly|
+|:---------------|---------:|-------------:|--------------:|----------:|
+|clinton         | 0.1177523|     0.5819842|      0.2392696|  0.0609940|
+|trump           | 0.0145487|     0.1903907|      0.3454872|  0.4495734|
+|other/no answer | 0.0451761|     0.4058193|      0.3683002|  0.1807044|
+80% of Trump supporters believe the war against ISIS is going poorly.
+
+## What do Trump supporters think of Obamacare?
+
+```r
+cconds[["view on obamacare"]]
+```
+
+
+
+|                | did not go far enough| was about right| went too far|
+|:---------------|---------------------:|---------------:|------------:|
+|clinton         |             0.5285833|       0.3334254|    0.1379913|
+|trump           |             0.1168533|       0.0389805|    0.8441662|
+|other/no answer |             0.2653430|       0.3185921|    0.4160650|
+84% of Trump supporters believe Obamacare went too far.
+
+## Do Trump supporters want the wall?
+
+```r
+cconds[["view of u.s. wall along the entire mexican border"]]
+```
+
+
+
+|                |   support|    oppose|
+|:---------------|---------:|---------:|
+|clinton         | 0.0908270| 0.9091730|
+|trump           | 0.7934703| 0.2065297|
+|other/no answer | 0.3022556| 0.6977444|
+79% of Trump supporters support the construction of the wall.
+
+
+## What do Trump supporters think of the federal government?
+
+```r
+cconds[["feelings about the federal government"]]
+```
+
+
+
+|                | enthusiastic| satisfied| dissatisfied|     angry|
+|:---------------|------------:|---------:|------------:|---------:|
+|clinton         |    0.0834423| 0.3851251|    0.4428459| 0.0885866|
+|trump           |    0.0216814| 0.1042478|    0.4894690| 0.3846018|
+|other/no answer |    0.0195618| 0.2300469|    0.5297340| 0.2206573|
+87% of Trump supporters are dissatisified or angry with the federal
+government.
+
+## What do Trump supporters think of the direction of the country? 
+
+```r
+cconds[["direction of the country"]]
+```
+
+
+
+|                | right direction| wrong track|
+|:---------------|---------------:|-----------:|
+|clinton         |       0.6570784|   0.3429216|
+|trump           |       0.0581427|   0.9418573|
+|other/no answer |       0.1506977|   0.8493023|
+94% of Trump supporters believe the direction is on the wrong track.
+
 
 # Other questions
 
+
+```r
+cconds[["opinion of barack obama as president"]]
+```
+
+
+
+|                | strongly approve| somewhat approve| somewhat disapprove| strongly disapprove|
+|:---------------|----------------:|----------------:|-------------------:|-------------------:|
+|clinton         |        0.6531926|        0.2905939|           0.0353587|           0.0208548|
+|trump           |        0.0287158|        0.0912878|           0.1982629|           0.6817336|
+|other/no answer |        0.1460775|        0.4427412|           0.2651037|           0.1460775|
 
 ```r
 cconds[["in your vote, were supreme court appointments:"]]

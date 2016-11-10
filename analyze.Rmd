@@ -4,8 +4,8 @@
 
 **Questions**:
   * What characterizes Trump supporters?
-  * What motivates Trump supporters?
-  * What do Trump supporters think of the candidates?
+  * How do Trump supporters perceive candidates?
+  * Why did Trump supporters vote for Trump?
 
 ```{r}
 library(io);
@@ -144,56 +144,7 @@ cconds[["white born-again or evangelical christian?"]]
 cconds[["area type"]]
 ```
 
-# What motivates Trump supporters?
-
-## Which issues do Trump supporters care about?
-```{r}
-cconds[["most important issue facing the country"]]
-```
-
-## What do Trump supporters think of international trade?
-```{r}
-cconds[["effect of international trade"]]
-```
-
-## What do Trump supporters think of the ongoing war?
-```{r}
-cconds[["how is the fight against isis going?"]]
-```
-
-## What do Trump supporters think of Obamacare?
-```{r}
-cconds[["view on obamacare"]]
-```
-
-## Do Trump supporters want the wall?
-```{r}
-cconds[["view of u.s. wall along the entire mexican border"]]
-```
-79% of Trump supporters support the construction of the wall.
-
-## How has the financial situation of Trump supporters changed compared to four years ago?
-```{r}
-cconds[["financial situation compared to four years ago:"]]
-```
-44% of Trump supporters are financially worse today compared to four years
-ago.
-
-## What do Trump supporters think of the federal government?
-```{r}
-cconds[["feelings about the federal government"]]
-```
-87% of Trump supporters are dissatisified or angry with the federal
-government.
-
-## What do Trump supporters think of the direction of the country? 
-```{r}
-cconds[["direction of the country"]]
-```
-94% of Trump supporters believe the direction is on the wrong track.
-
-
-# What do Trump supporters think of the candidates?
+# How do Trump supporters perceive candidates?
 
 ## Which candidate qualities matter the most to Trump supporters?
 ```{r}
@@ -202,11 +153,6 @@ cconds[["which candidate quality mattered most?"]]
 73% of Trump supporters view the ability to bring change as the most important
 qualitity in the presidential candidate.
 
-
-## What do Trump supporters think of Obama?
-```{r}
-cconds[["opinion of barack obama as president"]]
-```
 
 ## What do Trump supporters think of Hillary?
 ```{r}
@@ -255,10 +201,65 @@ About 30% of voters believe neither candidate is honest.
 cconds[["does donald trump's treatment of women bother you:"]]
 ```
 
+# Why did Trump supporters vote for Trump?
+
+## Which issues do Trump supporters care about?
+```{r}
+cconds[["most important issue facing the country"]]
+```
+
+## How has the financial situation of Trump supporters changed compared to four years ago?
+```{r}
+cconds[["financial situation compared to four years ago:"]]
+```
+44% of Trump supporters are financially worse today compared to four years
+ago.
+
+## What do Trump supporters think of international trade?
+```{r}
+cconds[["effect of international trade"]]
+```
+While 62% of Trump supporters believe international trade eliminates jobs, 30%
+believe it creates jobs.
+
+## What do Trump supporters think of the ongoing war?
+```{r}
+cconds[["how is the fight against isis going?"]]
+```
+80% of Trump supporters believe the war against ISIS is going poorly.
+
+## What do Trump supporters think of Obamacare?
+```{r}
+cconds[["view on obamacare"]]
+```
+84% of Trump supporters believe Obamacare went too far.
+
+## Do Trump supporters want the wall?
+```{r}
+cconds[["view of u.s. wall along the entire mexican border"]]
+```
+79% of Trump supporters support the construction of the wall.
+
+
+## What do Trump supporters think of the federal government?
+```{r}
+cconds[["feelings about the federal government"]]
+```
+87% of Trump supporters are dissatisified or angry with the federal
+government.
+
+## What do Trump supporters think of the direction of the country? 
+```{r}
+cconds[["direction of the country"]]
+```
+94% of Trump supporters believe the direction is on the wrong track.
+
 
 # Other questions
 
 ```{r}
+cconds[["opinion of barack obama as president"]]
+
 cconds[["in your vote, were supreme court appointments:"]]
 
 cconds[["does the country's criminal justice system:"]]
