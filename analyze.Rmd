@@ -27,14 +27,16 @@ US population consists of 72.4% white Americans.
 ```{r}
 cconds[["gender"]]
 ```
-54% of Trump supporteres are men.
+54% of Trump supporters are men.
 
 
 ## Are women more likely to vote for Clinton?
 ```{r}
 fconds[["gender"]]
 
-gender <- as.matrix(counts[["gender"]][, c("trump", "clinton")]);
+gender <- as.matrix(counts[["gender"]][c("female", "male"), c("clinton", "trump")]);
+gender
+
 fisher.test(gender)
 ```
 Compared to males, female voters are 66% more likely to vote for Clinton.

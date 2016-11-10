@@ -53,7 +53,7 @@ cconds[["gender"]]
 |clinton         | 0.4120659| 0.5879341|
 |trump           | 0.5380571| 0.4619429|
 |other/no answer | 0.5809367| 0.4190633|
-54% of Trump supporteres are men.
+54% of Trump supporters are men.
 
 
 ## Are women more likely to vote for Clinton?
@@ -70,7 +70,18 @@ fconds[["gender"]]
 |female |  0.52|    0.54|  0.42|            0.04|
 
 ```r
-gender <- as.matrix(counts[["gender"]][, c("trump", "clinton")]);
+gender <- as.matrix(counts[["gender"]][c("female", "male"), c("clinton", "trump")]);
+gender
+```
+
+
+
+|       | clinton| trump|
+|:------|-------:|-----:|
+|female |    6890|  5359|
+|male   |    4829|  6242|
+
+```r
 fisher.test(gender)
 ```
 
