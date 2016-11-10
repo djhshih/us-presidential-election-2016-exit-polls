@@ -222,7 +222,7 @@ fisher.test(middle.class)
 ##   1.203152
 ```
 Those earning between $50,000 and $100,000 per year are 20% more likely to
-vote for Trump.
+vote for Trump, compared to people in other income brackets.
 
 
 ## Are Trump supporters mostly married?
