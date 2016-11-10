@@ -221,8 +221,9 @@ fisher.test(middle.class)
 ## odds ratio 
 ##   1.203152
 ```
-Those earning between $50,000 and $100,000 per year are 20% more likely to
-vote for Trump, compared to people in other income brackets.
+Compared to people in other income brackets, those earning between 
+$50,000 and $100,000 per year are 20% more likely to vote for Trump;
+33% of Trump supporters are in this income bracket.
 
 
 ## Are Trump supporters mostly married?
