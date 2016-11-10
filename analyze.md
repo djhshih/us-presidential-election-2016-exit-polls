@@ -1,10 +1,11 @@
 %\VignetteEngine{knitr::knitr}
 
-# Analyze exit poll for 2016 general presidential election
+# Analysis of exit poll for 2016 general presidential election
 
 **Questions**:
   * What characterizes Trump supporters?
   * What motivates Trump supporters?
+	* What do Trump supporters think of the candidates?
 
 
 ```r
@@ -67,6 +68,8 @@ significant. Therefore, the primary objective in the analysis is to report the
 magntitude of the proportions or differences in proportions.
 
 
+# What characterizes Trump supporters?
+
 ## Are Trump supporters predominately white?
 
 ```r
@@ -98,7 +101,6 @@ cconds[["gender"]]
 |trump           | 0.5380571| 0.4619429|
 |other/no answer | 0.5809367| 0.4190633|
 54% of Trump supporters are men.
-
 
 ## Are women more likely to vote for Clinton?
 
@@ -143,7 +145,6 @@ fisher.test(gender)
 ##   1.661886
 ```
 Compared to males, female voters are 66% more likely to vote for Clinton.
-
 
 ## Are Trump supporters predominately 'uneducated'?
 
@@ -280,7 +281,6 @@ Compared to people in other income brackets, those earning between
 $50,000 and $100,000 per year are 20% more likely to vote for Trump;
 33% of Trump supporters are in this income bracket.
 
-
 ## Are Trump supporters mostly married?
 
 ```r
@@ -363,6 +363,7 @@ cconds[["area type"]]
 |trump           |  0.2535162|     0.5219656|  0.2245181|
 |other/no answer |  0.3947991|     0.4736013|  0.1315997|
 
+# What motivates Trump supporters?
 
 ## Which issues do Trump supporters care about?
 
@@ -451,6 +452,39 @@ cconds[["financial situation compared to four years ago:"]]
 44% of Trump supporters are financially worse today compared to four years
 ago.
 
+## What do Trump supporters think of the federal government?
+
+```r
+cconds[["feelings about the federal government"]]
+```
+
+
+
+|                | enthusiastic| satisfied| dissatisfied|     angry|
+|:---------------|------------:|---------:|------------:|---------:|
+|clinton         |    0.0834423| 0.3851251|    0.4428459| 0.0885866|
+|trump           |    0.0216814| 0.1042478|    0.4894690| 0.3846018|
+|other/no answer |    0.0195618| 0.2300469|    0.5297340| 0.2206573|
+87% of Trump supporters are dissatisified or angry with the federal
+government.
+
+## What do Trump supporters think of the direction of the country? 
+
+```r
+cconds[["direction of the country"]]
+```
+
+
+
+|                | right direction| wrong track|
+|:---------------|---------------:|-----------:|
+|clinton         |       0.6570784|   0.3429216|
+|trump           |       0.0581427|   0.9418573|
+|other/no answer |       0.1506977|   0.8493023|
+94% of Trump supporters believe the direction is on the wrong track.
+
+
+# What do Trump supporters think of the candidates?
 
 ## Which candidate qualities matter the most to Trump supporters?
 
@@ -465,7 +499,9 @@ cconds[["which candidate quality mattered most?"]]
 |clinton         |      0.1880726|        0.1180409|        0.4085624|     0.2853242|
 |trump           |      0.1179703|        0.7274226|        0.0377358|     0.1168712|
 |other/no answer |      0.2478386|        0.2756964|        0.0989433|     0.3775216|
-73% of Trump supporters want change.
+73% of Trump supporters view the ability to bring change as the most important
+qualitity in the presidential candidate.
+
 
 ## What do Trump supporters think of Obama?
 
@@ -582,6 +618,7 @@ cconds[["which candidate has the right temperament?"]]
 21% of Trump supporters believe neither candidate is qualified.
 22% of Trump supporters believe neither candidate has the right temperament.
 
+## Which candidate do Trump supporters believe to be honest?
 
 ```r
 cconds[["which candidate is honest?"]]
@@ -607,6 +644,8 @@ honest["neither is"] / sum(honest)
 About 30% of voters believe neither candidate is honest.
 
 
+# Other questions
+
 
 ```r
 cconds[["in your vote, were supreme court appointments:"]]
@@ -631,18 +670,6 @@ cconds[["does the country's criminal justice system:"]]
 |clinton         |        0.2249513|             0.7750487|
 |trump           |        0.7508414|             0.2491586|
 |other/no answer |        0.2778265|             0.7221735|
-
-```r
-cconds[["feelings about the federal government"]]
-```
-
-
-
-|                | enthusiastic| satisfied| dissatisfied|     angry|
-|:---------------|------------:|---------:|------------:|---------:|
-|clinton         |    0.0834423| 0.3851251|    0.4428459| 0.0885866|
-|trump           |    0.0216814| 0.1042478|    0.4894690| 0.3846018|
-|other/no answer |    0.0195618| 0.2300469|    0.5297340| 0.2206573|
 
 ```r
 cconds[["opinion of government"]]
@@ -765,18 +792,6 @@ cconds[["condition of national economy"]]
 |other/no answer | 0.0052830| 0.3056604| 0.4558491| 0.2332075|
 
 ```r
-cconds[["direction of the country"]]
-```
-
-
-
-|                | right direction| wrong track|
-|:---------------|---------------:|-----------:|
-|clinton         |       0.6570784|   0.3429216|
-|trump           |       0.0581427|   0.9418573|
-|other/no answer |       0.1506977|   0.8493023|
-
-```r
 cconds[["life for the next generation of americans will be:"]]
 ```
 
@@ -801,7 +816,8 @@ cconds[["importance of debates to your vote"]]
 |other/no answer |             0.1542169|           0.4493976|      0.1686747|    0.2277108|
 
 ```r
-# trends in this contingency table are not considered statistically significant
+# differences between Clinton and Trump supporters in this contingency table 
+# are not considered statistically significant
 cconds[["were debates a factor in your vote?"]]
 ```
 

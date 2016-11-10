@@ -1,10 +1,11 @@
 %\VignetteEngine{knitr::knitr}
 
-# Analyze exit poll for 2016 general presidential election
+# Analysis of exit poll for 2016 general presidential election
 
 **Questions**:
   * What characterizes Trump supporters?
   * What motivates Trump supporters?
+	* What do Trump supporters think of the candidates?
 
 ```{r}
 library(io);
@@ -47,6 +48,8 @@ significant. Therefore, the primary objective in the analysis is to report the
 magntitude of the proportions or differences in proportions.
 
 
+# What characterizes Trump supporters?
+
 ## Are Trump supporters predominately white?
 ```{r}
 cconds[["race"]]
@@ -61,7 +64,6 @@ cconds[["gender"]]
 ```
 54% of Trump supporters are men.
 
-
 ## Are women more likely to vote for Clinton?
 ```{r}
 fconds[["gender"]]
@@ -72,7 +74,6 @@ gender
 fisher.test(gender)
 ```
 Compared to males, female voters are 66% more likely to vote for Clinton.
-
 
 ## Are Trump supporters predominately 'uneducated'?
 ```{r}
@@ -117,7 +118,6 @@ Compared to people in other income brackets, those earning between
 $50,000 and $100,000 per year are 20% more likely to vote for Trump;
 33% of Trump supporters are in this income bracket.
 
-
 ## Are Trump supporters mostly married?
 ```{r}
 cconds[["marital status"]]
@@ -144,6 +144,7 @@ cconds[["white born-again or evangelical christian?"]]
 cconds[["area type"]]
 ```
 
+# What motivates Trump supporters?
 
 ## Which issues do Trump supporters care about?
 ```{r}
@@ -178,12 +179,29 @@ cconds[["financial situation compared to four years ago:"]]
 44% of Trump supporters are financially worse today compared to four years
 ago.
 
+## What do Trump supporters think of the federal government?
+```{r}
+cconds[["feelings about the federal government"]]
+```
+87% of Trump supporters are dissatisified or angry with the federal
+government.
+
+## What do Trump supporters think of the direction of the country? 
+```{r}
+cconds[["direction of the country"]]
+```
+94% of Trump supporters believe the direction is on the wrong track.
+
+
+# What do Trump supporters think of the candidates?
 
 ## Which candidate qualities matter the most to Trump supporters?
 ```{r}
 cconds[["which candidate quality mattered most?"]]
 ```
-73% of Trump supporters want change.
+73% of Trump supporters view the ability to bring change as the most important
+qualitity in the presidential candidate.
+
 
 ## What do Trump supporters think of Obama?
 ```{r}
@@ -226,6 +244,7 @@ cconds[["which candidate has the right temperament?"]]
 21% of Trump supporters believe neither candidate is qualified.
 22% of Trump supporters believe neither candidate has the right temperament.
 
+## Which candidate do Trump supporters believe to be honest?
 ```{r}
 cconds[["which candidate is honest?"]]
 
@@ -235,12 +254,12 @@ honest["neither is"] / sum(honest)
 About 30% of voters believe neither candidate is honest.
 
 
+# Other questions
+
 ```{r}
 cconds[["in your vote, were supreme court appointments:"]]
 
 cconds[["does the country's criminal justice system:"]]
-
-cconds[["feelings about the federal government"]]
 
 cconds[["opinion of government"]]
 
@@ -262,14 +281,12 @@ cconds[["opinion of the republican party"]]
 
 cconds[["condition of national economy"]]
 
-
-cconds[["direction of the country"]]
-
 cconds[["life for the next generation of americans will be:"]]
 
 cconds[["importance of debates to your vote"]]
 
-# trends in this contingency table are not considered statistically significant
+# differences between Clinton and Trump supporters in this contingency table 
+# are not considered statistically significant
 cconds[["were debates a factor in your vote?"]]
 ```
 
