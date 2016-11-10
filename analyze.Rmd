@@ -31,7 +31,7 @@ fdr <- 0.01;
 
 # adjust for multiple hypothesis testing
 q.values <- p.adjust(p.values, method="BY");
-which(q.values >= fdr)
+names(which(q.values >= fdr))
 
 # number f expected false positives
 sum(q.values < fdr) * fdr
