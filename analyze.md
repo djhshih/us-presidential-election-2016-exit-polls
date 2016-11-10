@@ -70,25 +70,15 @@ fconds[["gender"]]
 |female |  0.52|    0.54|  0.42|            0.04|
 
 ```r
-counts[["gender"]]
-```
-
-
-
-|       | clinton| trump| other/no answer|
-|:------|-------:|-----:|---------------:|
-|male   |    4829|  6242|             707|
-|female |    6890|  5359|             510|
-
-```r
-fisher.test(as.matrix(counts[["gender"]][, c("trump", "clinton")]))
+gender <- as.matrix(counts[["gender"]][, c("trump", "clinton")]);
+fisher.test(gender)
 ```
 
 ```
 ## 
 ## 	Fisher's Exact Test for Count Data
 ## 
-## data:  as.matrix(counts[["gender"]][, c("trump", "clinton")])
+## data:  gender
 ## p-value < 2.2e-16
 ## alternative hypothesis: true odds ratio is not equal to 1
 ## 95 percent confidence interval:
@@ -97,7 +87,7 @@ fisher.test(as.matrix(counts[["gender"]][, c("trump", "clinton")]))
 ## odds ratio 
 ##   1.661886
 ```
-Female voters are 66% more likely to vote for Trump.
+Compared to males, female voters are 66% more likely to vote for Clinton.
 
 
 ## Are Trump supporters predominately 'uneducated'?
