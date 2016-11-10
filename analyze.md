@@ -544,20 +544,8 @@ cconds[["opinion of donald trump"]]
 |clinton         | 0.0318558|   0.9681442|
 |trump           | 0.8004699|   0.1995301|
 |other/no answer | 0.0731707|   0.9268293|
-
-## Does Trump's treatment of women bother Trump supporters?
-
-```r
-cconds[["does donald trump's treatment of women bother you:"]]
-```
-
-
-
-|                |     a lot|      some|  not much| not at all|
-|:---------------|---------:|---------:|---------:|----------:|
-|clinton         | 0.8656691| 0.0792382| 0.0216800|  0.0334127|
-|trump           | 0.1198898| 0.3270530| 0.2494668|  0.3035905|
-|other/no answer | 0.5768025| 0.2304075| 0.1003135|  0.0924765|
+Although 20% of Trump supporters view Trump unfavorably, they nevertheless
+voted for him.
 
 ## Do Trump supporters believe Trump is qualified to be president?
 
@@ -642,6 +630,20 @@ honest["neither is"] / sum(honest)
 ##  0.3085028
 ```
 About 30% of voters believe neither candidate is honest.
+
+## Does Trump's treatment of women bother Trump supporters?
+
+```r
+cconds[["does donald trump's treatment of women bother you:"]]
+```
+
+
+
+|                |     a lot|      some|  not much| not at all|
+|:---------------|---------:|---------:|---------:|----------:|
+|clinton         | 0.8656691| 0.0792382| 0.0216800|  0.0334127|
+|trump           | 0.1198898| 0.3270530| 0.2494668|  0.3035905|
+|other/no answer | 0.5768025| 0.2304075| 0.1003135|  0.0924765|
 
 
 # Other questions

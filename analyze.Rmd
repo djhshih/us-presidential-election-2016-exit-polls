@@ -217,11 +217,8 @@ cconds[["opinion of hillary clinton"]]
 ```{r}
 cconds[["opinion of donald trump"]]
 ```
-
-## Does Trump's treatment of women bother Trump supporters?
-```{r}
-cconds[["does donald trump's treatment of women bother you:"]]
-```
+Although 20% of Trump supporters view Trump unfavorably, they nevertheless
+voted for him.
 
 ## Do Trump supporters believe Trump is qualified to be president?
 ```{r}
@@ -252,6 +249,11 @@ honest <- rowSums(counts[["which candidate is honest?"]], na.rm=TRUE);
 honest["neither is"] / sum(honest)
 ```
 About 30% of voters believe neither candidate is honest.
+
+## Does Trump's treatment of women bother Trump supporters?
+```{r}
+cconds[["does donald trump's treatment of women bother you:"]]
+```
 
 
 # Other questions
