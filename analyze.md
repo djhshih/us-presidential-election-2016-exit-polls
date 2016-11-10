@@ -389,8 +389,7 @@ cconds[["view of u.s. wall along the entire mexican border"]]
 |other/no answer | 0.3022556| 0.6977444|
 79% of Trump supporters support the construction of the wall.
 
-## How has the financial situation of Trump supporters changed compared to
-## four years ago?
+## How has the financial situation of Trump supporters changed compared to four years ago?
 
 ```r
 cconds[["financial situation compared to four years ago:"]]
@@ -509,8 +508,7 @@ cconds[["does trump have the temperament to be president?"]]
 28% of Trump suppporters do not believe Trump has the temperatment to be
 president.
 
-## Which candidates do Trump supporter believe has the qualification or temperament
-## to be president?
+## Which candidates do Trump supporter believe has the qualification or temperament to be president?
 
 ```r
 cconds[["who is qualified to serve as president?"]]
