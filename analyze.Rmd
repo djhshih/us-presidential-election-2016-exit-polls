@@ -5,7 +5,7 @@
 **Questions**:
   * What characterizes Trump supporters?
   * What motivates Trump supporters?
-	* What do Trump supporters think of the candidates?
+  * What do Trump supporters think of the candidates?
 
 ```{r}
 library(io);
