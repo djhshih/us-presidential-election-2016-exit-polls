@@ -34,10 +34,10 @@ cconds[["gender"]]
 ```{r}
 fconds[["gender"]]
 
-counts[["gender"]]
-fisher.test(as.matrix(counts[["gender"]][, c("trump", "clinton")]))
+gender <- as.matrix(counts[["gender"]][, c("trump", "clinton")]);
+fisher.test(gender)
 ```
-Female voters are 66% more likely to vote for Trump.
+Compared to males, female voters are 66% more likely to vote for Clinton.
 
 
 ## Are Trump supporters predominately 'uneducated'?
