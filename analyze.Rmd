@@ -15,6 +15,38 @@ fconds <- qread("ctable-prop_feature-conditionals.rds");
 counts <- qread("ctable-counts.rds");
 ```
 
+```{r}
+# calculate statistical significance of contingency tables,
+# considering only the "clinton" and "trump" voter classes
+p.values <- unlist(lapply(counts,
+	function(ct) {
+		x <- ct[, c("trump", "clinton")];
+		x <- x[complete.cases(x), ];
+		chisq.test(x)$p.value
+	}
+));
+
+fdr <- 0.01;
+
+# adjust for multiple hypothesis testing
+q.values <- p.adjust(p.values, method="BY");
+which(q.values >= fdr)
+
+# number f expected false positives
+sum(q.values < fdr) * fdr
+```
+All of the contingency values are statistically significant at the nominal
+false discovery rate of 0.1, with the exception of the survey question, "Were
+debates a factor in your vote?" At this false disovery rate level, less than
+one false positive result is expected. This result indicates that the trend
+observed in any of the remaining contingency tables is unlikely to be due
+purely to chance.  Since the large sample size created tight bounds on the
+uncertainty of the proportions reported in the contingency tables, any
+differences in proportions can be trivially considered statistically
+significant. Therefore, the primary objective in the analysis is to report the
+magntitude of the proportions or differences in proportions.
+
+
 ## Are Trump supporters predominately white?
 ```{r}
 cconds[["race"]]
@@ -237,6 +269,7 @@ cconds[["life for the next generation of americans will be:"]]
 
 cconds[["importance of debates to your vote"]]
 
+# trends in this contingency table are not considered statistically significant
 cconds[["were debates a factor in your vote?"]]
 ```
 
