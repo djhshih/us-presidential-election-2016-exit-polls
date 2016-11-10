@@ -40,12 +40,11 @@ fdr <- 0.01;
 
 # adjust for multiple hypothesis testing
 q.values <- p.adjust(p.values, method="BY");
-which(q.values >= fdr)
+names(which(q.values >= fdr))
 ```
 
 ```
-## were debates a factor in your vote? 
-##                                  88
+## [1] "were debates a factor in your vote?"
 ```
 
 ```r
