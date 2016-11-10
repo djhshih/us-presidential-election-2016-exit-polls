@@ -2,12 +2,13 @@
 
 # Analyze exit poll for 2016 general presidential election
 
-*Questions*:
+**Questions**:
   * What characterizes Trump supporters?
   * What motivates Trump supporters?
 
 ```{r}
 library(io);
+library(printr);
 
 cconds <- qread("ctable-prop_class-conditionals.rds");
 fconds <- qread("ctable-prop_feature-conditionals.rds");
@@ -16,7 +17,7 @@ counts <- qread("ctable-counts.rds");
 
 ## Are Trump supporters predominately white?
 ```{r}
-cconds["race"]
+cconds[["race"]]
 ```
 86% of Trump supporters are white. According to the 2010 census, the general 
 US population consists of 72.4% white Americans.
@@ -24,16 +25,16 @@ US population consists of 72.4% white Americans.
 
 ## Are Trump supporters predominately male?
 ```{r}
-cconds["gender"]
+cconds[["gender"]]
 ```
-53.8% of Trump supporteres are men.
+54% of Trump supporteres are men.
 
 
 ## Are women more likely to vote for Clinton?
 ```{r}
-fconds["gender"]
+fconds[["gender"]]
 
-counts["gender"]
+counts[["gender"]]
 fisher.test(as.matrix(counts[["gender"]][, c("trump", "clinton")]))
 ```
 Female voters are 66% more likely to vote for Trump.
@@ -41,13 +42,13 @@ Female voters are 66% more likely to vote for Trump.
 
 ## Are Trump supporters predominately 'uneducated'?
 ```{r}
-cconds["education"]
+cconds[["education"]]
 ```
 45% of Trump supporters have a college or postgraduate degree.
 
 ## Are Trump female white supporters predominately 'uneducated'?
 ```{r}
-cconds["education among whites by sex"]
+cconds[["education among whites by sex"]]
 
 trump.white.females.ed <- counts[["education among whites by sex"]][1:2, "trump"];
 trump.white.females.ed / sum(trump.white.females.ed)
@@ -57,18 +58,18 @@ trump.white.females.ed / sum(trump.white.females.ed)
 
 ## Are Trump supporters predominately Republicans?
 ```{r}
-cconds["party id"]
-cconds["party by gender"]
+cconds[["party id"]]
+cconds[["party by gender"]]
 ```
 
 ## Are Trump supporters predominately poor people?
 ```{r}
-cconds["income"]
+cconds[["income"]]
 ```
 
-## Is midddle class more likely to vote for Trump?
+## Is the midddle class more likely to vote for Trump?
 ```{r}
-fconds["income"]
+fconds[["income"]]
 
 middle.class <- rbind(
 	middle_class = counts[["income"]][3, c("trump", "clinton")],
@@ -78,67 +79,67 @@ middle.class <- rbind(
 middle.class
 fisher.test(middle.class)
 ```
-Those earning between \$50,000 and \$100,000 per year are 20% more likely to
+Those earning between $50,000 and $100,000 per year are 20% more likely to
 vote for Trump.
 
 
 ## Are Trump supporters mostly married?
 ```{r}
-cconds["marital status"]
+cconds[["marital status"]]
 ```
 
 ## Are Trump supporters mostly conservatives?
 ```{r}
-cconds["ideology"]
+cconds[["ideology"]]
 ```
 
 ## Are Trump supporters predominately religious?
 ```{r}
-cconds["religion"]
-cconds["how often do you attend religious services?"]
+cconds[["religion"]]
+cconds[["how often do you attend religious services?"]]
 ```
 
 ## Are Trump supporters predominately Evangelical Christians?
 ```{r}
-cconds["white born-again or evangelical christian?"]
+cconds[["white born-again or evangelical christian?"]]
 ```
 
 ## Do Trump supporters predominately live in rural areas?
 ```{r}
-cconds["area type"]
+cconds[["area type"]]
 ```
 
 
 ## Which issues do Trump supporters care about?
 ```{r}
-cconds["most important issue facing the country"]
+cconds[["most important issue facing the country"]]
 ```
 
 ## What do Trump supporters think of international trade?
 ```{r}
-cconds["effect of international trade"]
+cconds[["effect of international trade"]]
 ```
 
 ## What do Trump supporters think of the ongoing war?
 ```{r}
-cconds["how is the fight against isis going?"]
+cconds[["how is the fight against isis going?"]]
 ```
 
 ## What do Trump supporters think of Obamacare?
 ```{r}
-cconds["view on obamacare"]
+cconds[["view on obamacare"]]
 ```
 
 ## Do Trump supporters want the wall?
 ```{r}
-cconds["view of u.s. wall along the entire mexican border"]
+cconds[["view of u.s. wall along the entire mexican border"]]
 ```
 79% of Trump supporters support the construction of the wall.
 
 ## How has the financial situation of Trump supporters changed compared to
 ## four years ago?
 ```{r}
-cconds["financial situation compared to four years ago:"]
+cconds[["financial situation compared to four years ago:"]]
 ```
 44% of Trump supporters are financially worse today compared to four years
 ago.
@@ -146,39 +147,39 @@ ago.
 
 ## Which candidate qualities matter the most to Trump supporters?
 ```{r}
-cconds["which candidate quality mattered most?"]
+cconds[["which candidate quality mattered most?"]]
 ```
 73% of Trump supporters want change.
 
 ## What do Trump supporters think of Obama?
 ```{r}
-cconds["opinion of barack obama as president"]
+cconds[["opinion of barack obama as president"]]
 ```
 
 ## What do Trump supporters think of Hillary?
 ```{r}
-cconds["opinion of hillary clinton"]
+cconds[["opinion of hillary clinton"]]
 ```
 
 ## What do Trump supporters think of Trump?
 ```{r}
-cconds["opinion of donald trump"]
+cconds[["opinion of donald trump"]]
 ```
 
 ## Does Trump's treatment of women bother Trump supporters?
 ```{r}
-cconds["does donald trump's treatment of women bother you:"]
+cconds[["does donald trump's treatment of women bother you:"]]
 ```
 
 ## Do Trump supporters believe Trump is qualified to be president?
 ```{r}
-cconds["is trump qualified to serve as president?"]
+cconds[["is trump qualified to serve as president?"]]
 ```
 23% of Trump supporters do not believe Trump to be qualified to be president.
 
 ## Do Trump supporters believe Trump has the temperament to be president?
 ```{r}
-cconds["does trump have the temperament to be president?"]
+cconds[["does trump have the temperament to be president?"]]
 ```
 28% of Trump suppporters do not believe Trump has the temperatment to be
 president.
@@ -186,14 +187,14 @@ president.
 ## Which candidates do Trump supporter believe has the qualification or temperament
 ## to be president?
 ```{r}
-cconds["who is qualified to serve as president?"]
-cconds["which candidate has the right temperament?"]
+cconds[["who is qualified to serve as president?"]]
+cconds[["which candidate has the right temperament?"]]
 ```
 21% of Trump supporters believe neither candidate is qualified.
 22% of Trump supporters believe neither candidate has the right temperament.
 
 ```{r}
-cconds["which candidate is honest?"]
+cconds[["which candidate is honest?"]]
 
 honest <- rowSums(counts[["which candidate is honest?"]], na.rm=TRUE);
 honest["neither is"] / sum(honest)
@@ -202,39 +203,39 @@ About 30% of voters believe neither candidate is honest.
 
 
 ```{r}
-cconds["in your vote, were supreme court appointments:"]
+cconds[["in your vote, were supreme court appointments:"]]
 
-cconds["does the country's criminal justice system:"]
+cconds[["does the country's criminal justice system:"]]
 
-cconds["feelings about the federal government"]
+cconds[["feelings about the federal government"]]
 
-cconds["opinion of government"]
+cconds[["opinion of government"]]
 
-cconds["is hillary clinton honest and trustworthy?"]
+cconds[["is hillary clinton honest and trustworthy?"]]
 
-cconds["is donald trump honest and trustworthy?"]
+cconds[["is donald trump honest and trustworthy?"]]
 
-cconds["is clinton qualified to serve as president?"]
+cconds[["is clinton qualified to serve as president?"]]
 
-cconds["who would better handle the economy?"]
+cconds[["who would better handle the economy?"]]
 
-cconds["who would better handle foreign policy?"]
+cconds[["who would better handle foreign policy?"]]
 
-cconds["who would be a better commander in chief?"]
+cconds[["who would be a better commander in chief?"]]
 
-cconds["opinion of the democratic party"]
+cconds[["opinion of the democratic party"]]
 
-cconds["opinion of the republican party"]
+cconds[["opinion of the republican party"]]
 
-cconds["condition of national economy"]
+cconds[["condition of national economy"]]
 
 
-cconds["direction of the country"]
+cconds[["direction of the country"]]
 
-cconds["life for the next generation of americans will be:"]
+cconds[["life for the next generation of americans will be:"]]
 
-cconds["importance of debates to your vote"]
+cconds[["importance of debates to your vote"]]
 
-cconds["were debates a factor in your vote?"]
+cconds[["were debates a factor in your vote?"]]
 ```
 
