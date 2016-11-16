@@ -82,9 +82,8 @@ cconds[["race"]]
 |clinton         | 0.5408511| 0.2205106| 0.1492766| 0.0542979|  0.0350638|
 |trump           | 0.8634827| 0.0204559| 0.0678686| 0.0246165|  0.0235763|
 |other/no answer | 0.6872000| 0.0944000| 0.1296000| 0.0472000|  0.0416000|
-86% of Trump supporters are white. According to the 2010 census, the general 
-US population consists of 72.4% white Americans.
-(http://www.census.gov/prod/cen2010/briefs/c2010br-02.pdf)
+86% of Trump supporters are white. According to the United States Census Bureau, the 
+US electorate consists of 77.1% white Americans ([2015](http://www.census.gov/data/tables/time-series/demo/voting-and-registration/electorate-profiles-2016.html)).
 
 ## Are Trump supporters predominately male?
 

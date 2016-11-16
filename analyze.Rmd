@@ -54,9 +54,8 @@ magntitude of the proportions or differences in proportions.
 ```{r}
 cconds[["race"]]
 ```
-86% of Trump supporters are white. According to the 2010 census, the general 
-US population consists of 72.4% white Americans.
-(http://www.census.gov/prod/cen2010/briefs/c2010br-02.pdf)
+86% of Trump supporters are white. According to the United States Census Bureau, the 
+US electorate consists of 77.1% white Americans ([2015](http://www.census.gov/data/tables/time-series/demo/voting-and-registration/electorate-profiles-2016.html)).
 
 ## Are Trump supporters predominately male?
 ```{r}
